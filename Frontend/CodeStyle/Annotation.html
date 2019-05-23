@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>代码注释的艺术，再也不怕被说代码可读性差啦！ | 余生的前端笔记本</title>
+    <meta name="description" content="记录着很多很正常很平凡的代码">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <link rel="preload" href="/fe-notes/assets/css/0.styles.2954d654.css" as="style"><link rel="preload" href="/fe-notes/assets/js/app.b0a84784.js" as="script"><link rel="preload" href="/fe-notes/assets/js/17.839f1570.js" as="script"><link rel="prefetch" href="/fe-notes/assets/js/10.b3319d19.js"><link rel="prefetch" href="/fe-notes/assets/js/11.48fd8d81.js"><link rel="prefetch" href="/fe-notes/assets/js/12.06118328.js"><link rel="prefetch" href="/fe-notes/assets/js/13.c854934e.js"><link rel="prefetch" href="/fe-notes/assets/js/14.14647ca4.js"><link rel="prefetch" href="/fe-notes/assets/js/15.f5502607.js"><link rel="prefetch" href="/fe-notes/assets/js/16.ed3f7044.js"><link rel="prefetch" href="/fe-notes/assets/js/18.2a16205f.js"><link rel="prefetch" href="/fe-notes/assets/js/19.0ffd289c.js"><link rel="prefetch" href="/fe-notes/assets/js/2.c01c45a3.js"><link rel="prefetch" href="/fe-notes/assets/js/20.e4ac3ba7.js"><link rel="prefetch" href="/fe-notes/assets/js/21.4f1f46b9.js"><link rel="prefetch" href="/fe-notes/assets/js/22.41b6c7c3.js"><link rel="prefetch" href="/fe-notes/assets/js/23.1b9b9e1c.js"><link rel="prefetch" href="/fe-notes/assets/js/24.c200a957.js"><link rel="prefetch" href="/fe-notes/assets/js/25.dcc4dc40.js"><link rel="prefetch" href="/fe-notes/assets/js/26.21279055.js"><link rel="prefetch" href="/fe-notes/assets/js/27.3c19e8b7.js"><link rel="prefetch" href="/fe-notes/assets/js/28.0d48e96e.js"><link rel="prefetch" href="/fe-notes/assets/js/29.48f8c626.js"><link rel="prefetch" href="/fe-notes/assets/js/3.487df0b0.js"><link rel="prefetch" href="/fe-notes/assets/js/30.944abc4a.js"><link rel="prefetch" href="/fe-notes/assets/js/31.39330c18.js"><link rel="prefetch" href="/fe-notes/assets/js/32.4119198f.js"><link rel="prefetch" href="/fe-notes/assets/js/33.e1d879db.js"><link rel="prefetch" href="/fe-notes/assets/js/34.35aa1abf.js"><link rel="prefetch" href="/fe-notes/assets/js/35.9321a8d4.js"><link rel="prefetch" href="/fe-notes/assets/js/36.b66eb013.js"><link rel="prefetch" href="/fe-notes/assets/js/37.e8b7dfd6.js"><link rel="prefetch" href="/fe-notes/assets/js/38.41211ca2.js"><link rel="prefetch" href="/fe-notes/assets/js/39.b2c0d3e3.js"><link rel="prefetch" href="/fe-notes/assets/js/4.1aa275c6.js"><link rel="prefetch" href="/fe-notes/assets/js/40.73dd84ba.js"><link rel="prefetch" href="/fe-notes/assets/js/41.0777084f.js"><link rel="prefetch" href="/fe-notes/assets/js/42.3ac8818c.js"><link rel="prefetch" href="/fe-notes/assets/js/43.9c893492.js"><link rel="prefetch" href="/fe-notes/assets/js/44.c9cf156f.js"><link rel="prefetch" href="/fe-notes/assets/js/45.146d0515.js"><link rel="prefetch" href="/fe-notes/assets/js/46.08d440b8.js"><link rel="prefetch" href="/fe-notes/assets/js/47.0a4e8c42.js"><link rel="prefetch" href="/fe-notes/assets/js/48.45055a09.js"><link rel="prefetch" href="/fe-notes/assets/js/49.9b5f845f.js"><link rel="prefetch" href="/fe-notes/assets/js/5.c27f2c72.js"><link rel="prefetch" href="/fe-notes/assets/js/50.342455d8.js"><link rel="prefetch" href="/fe-notes/assets/js/51.bb55915d.js"><link rel="prefetch" href="/fe-notes/assets/js/52.50b14794.js"><link rel="prefetch" href="/fe-notes/assets/js/53.f09b8652.js"><link rel="prefetch" href="/fe-notes/assets/js/54.fff52d0a.js"><link rel="prefetch" href="/fe-notes/assets/js/55.66adb428.js"><link rel="prefetch" href="/fe-notes/assets/js/56.55f3a131.js"><link rel="prefetch" href="/fe-notes/assets/js/57.bab18d73.js"><link rel="prefetch" href="/fe-notes/assets/js/58.eb10fdf9.js"><link rel="prefetch" href="/fe-notes/assets/js/59.6f45e7bc.js"><link rel="prefetch" href="/fe-notes/assets/js/6.cab47dfd.js"><link rel="prefetch" href="/fe-notes/assets/js/60.a16b67f2.js"><link rel="prefetch" href="/fe-notes/assets/js/61.a37239cc.js"><link rel="prefetch" href="/fe-notes/assets/js/62.dad87959.js"><link rel="prefetch" href="/fe-notes/assets/js/63.03f34367.js"><link rel="prefetch" href="/fe-notes/assets/js/64.d3038733.js"><link rel="prefetch" href="/fe-notes/assets/js/65.3ca46991.js"><link rel="prefetch" href="/fe-notes/assets/js/66.39f07396.js"><link rel="prefetch" href="/fe-notes/assets/js/67.ef105f19.js"><link rel="prefetch" href="/fe-notes/assets/js/68.d815d51c.js"><link rel="prefetch" href="/fe-notes/assets/js/69.70308300.js"><link rel="prefetch" href="/fe-notes/assets/js/7.8b00252c.js"><link rel="prefetch" href="/fe-notes/assets/js/70.d9cb98c9.js"><link rel="prefetch" href="/fe-notes/assets/js/71.4db0c442.js"><link rel="prefetch" href="/fe-notes/assets/js/72.a7b552c0.js"><link rel="prefetch" href="/fe-notes/assets/js/73.528c9dc2.js"><link rel="prefetch" href="/fe-notes/assets/js/74.583a9483.js"><link rel="prefetch" href="/fe-notes/assets/js/75.94c1704d.js"><link rel="prefetch" href="/fe-notes/assets/js/76.f7106df3.js"><link rel="prefetch" href="/fe-notes/assets/js/77.bcb903b5.js"><link rel="prefetch" href="/fe-notes/assets/js/78.b9360e97.js"><link rel="prefetch" href="/fe-notes/assets/js/79.93354985.js"><link rel="prefetch" href="/fe-notes/assets/js/8.8e841b50.js"><link rel="prefetch" href="/fe-notes/assets/js/80.b14fd898.js"><link rel="prefetch" href="/fe-notes/assets/js/81.2c0e2273.js"><link rel="prefetch" href="/fe-notes/assets/js/9.4e994804.js">
+    <link rel="stylesheet" href="/fe-notes/assets/css/0.styles.2954d654.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-notes/" class="home-link router-link-active"><!----> <span class="site-name">余生的前端笔记本</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-notes/Frontend/" class="nav-link router-link-active">大前端</a></div><div class="nav-item"><a href="/fe-notes/notes/" class="nav-link">笔记本</a></div><div class="nav-item"><a href="/fe-notes/course/Vue/" class="nav-link">Vue</a></div><div class="nav-item"><a href="/fe-notes/course/React/" class="nav-link">React</a></div><div class="nav-item"><a href="/fe-notes/CodeTools/VSCode/VSCodeVue.html" class="nav-link">code工具</a></div><div class="nav-item"><a href="/fe-notes/dzh/Explain.html" class="nav-link">大杂烩</a></div><div class="nav-item"><a href="https://xn213.github.io/FrontEndNav/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  余生博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-notes/Frontend/" class="nav-link router-link-active">大前端</a></div><div class="nav-item"><a href="/fe-notes/notes/" class="nav-link">笔记本</a></div><div class="nav-item"><a href="/fe-notes/course/Vue/" class="nav-link">Vue</a></div><div class="nav-item"><a href="/fe-notes/course/React/" class="nav-link">React</a></div><div class="nav-item"><a href="/fe-notes/CodeTools/VSCode/VSCodeVue.html" class="nav-link">code工具</a></div><div class="nav-item"><a href="/fe-notes/dzh/Explain.html" class="nav-link">大杂烩</a></div><div class="nav-item"><a href="https://xn213.github.io/FrontEndNav/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  余生博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/fe-notes/Frontend/Fetch.html" class="sidebar-link">Fetch</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Code Style</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/fe-notes/Frontend/CodeStyle/页面优化.html" class="sidebar-link">页面优化</a></li><li><a href="/fe-notes/Frontend/CodeStyle/代码可读性.html" class="sidebar-link">代码可读性</a></li><li><a href="/fe-notes/Frontend/CodeStyle/Annotation.html" class="active sidebar-link">代码注释的艺术</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Css</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Js</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>项目</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="代码注释的艺术，再也不怕被说代码可读性差啦！"><a href="#代码注释的艺术，再也不怕被说代码可读性差啦！" aria-hidden="true" class="header-anchor">#</a> 代码注释的艺术，再也不怕被说代码可读性差啦！</h1> <img src="https://user-gold-cdn.xitu.io/2019/5/23/16ae4b504ab978e1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" width="32%" height="32%"> <h3 id="前言"><a href="#前言" aria-hidden="true" class="header-anchor">#</a> 前言</h3> <p><a href="https://juejin.im/post/5ce694c1f265da1b6e657c84" target="_blank" rel="noopener noreferrer">原文<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+可能现在不管大家去面试还是在公司上班都会涉及到代码可读性，或者是代码规范。优秀的代码注释可以提高代码可读性，当然优秀的命名规范也可以啦。我们这里就讨论一下代码注释。代码注释可能就相当于产品使用说明书，当别人看到你的代码的时候，知道你的代码是干嘛的，是怎么使用的。我们所熟悉的可能就是 <code>//</code> 是单行注释，<code>/***/</code> 是多行注释，下面我们就来聊一聊代码注释!</p> <h3 id="文件注释"><a href="#文件注释" aria-hidden="true" class="header-anchor">#</a> 文件注释</h3> <p>关于文件注释可能很多同学都没有用过，但大家都多多少少有看过文件注释。</p> <p>比如我们熟悉的jQuery/vuejs/reactjs的文件注释：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// jQuery的文件注释</span>
+<span class="token comment">/*!
+ * jQuery JavaScript Library v1.11.3
+ * http://jquery.com/
+ *
+ * Includes Sizzle.js
+ * http://sizzlejs.com/
+ *
+ * Copyright 2005, 2014 jQuery Foundation, Inc. and other contributors
+ * Released under the MIT license
+ * http://jquery.org/license
+ *
+ * Date: 2015-04-28T16:19Z
+ */</span>
+
+<span class="token comment">// vuejs的文件注释</span>
+<span class="token comment">/*!
+ * Vue.js v2.6.10
+ * (c) 2014-2019 Evan You
+ * Released under the MIT License.
+ */</span>
+
+<span class="token comment">// reactjs的文件注释</span>
+<span class="token comment">/** @license React v16.8.6
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */</span>
+<span class="token comment">/*
+ Modernizr 3.0.0pre (Custom Build) | MIT
+*/</span>
+</code></pre></div><p>在这里我们可以大概了解到版权或者作者，又或者开源协议等信息。</p> <p>在日常工作中我们也经常看到这样的文件注释：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/*
+ * @Description: Description
+ * @Author: js-say
+ * @Date: 2019-05-23 17:57:10
+ * @LastEditTime: 2019-05-23 17:57:10
+ * @LastEditors: js-say
+ */</span>
+</code></pre></div><p>这样的注释包括了描述、作者、创建时间、更新时间等。这样大家一眼就能知道这个文件大概实现了什么功能，开始是谁写的，最后维护的是谁。文件注释其实可以看自己公司要求和规范来写！使用 <code>vs-code</code> 的话有一个插件可以快捷生成文件注释，当然方法注释也是可以的。这里就只给插件名字啦，具体怎么使用大家可以自己研究一下！</p> <p>插件：<a href="https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2FOBKoro1%2Fkoro1FileHeader" target="_blank" rel="noopener noreferrer">koroFileHeader<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>其实文件注释也有一些规范的：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @file 对文件的描述，用于文件的头部
+ * @author &lt;name&gt; [&lt;emailAddress&gt;] 代码的作者,在姓名后面用尖括号加上邮箱会被自动转成 mailto: 的链接
+ * @copyright &lt;some copyright text&gt; 与@file结合使用，说明版权相关的信息
+ * @license &lt;identifier&gt; 说明许可证相关的信息
+ * @version 版本号
+ */</span>
+</code></pre></div><p>大致一个文件注释可以是这样子的，还可以有很多比如 <code>@desc</code> 描述之类的，大家可以参考 <a href="https://link.juejin.im/?target=https%3A%2F%2Fjsdoc.app%2F" target="_blank" rel="noopener noreferrer">jsDoc<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="代码块注释"><a href="#代码块注释" aria-hidden="true" class="header-anchor">#</a> 代码块注释</h3> <p>代码块注释，也可以说是方法注释，可以提现出方法的用处，已经所需参数，返回值等；大大提高代码的可读性！</p> <p>下面就是一个简单的方法注释：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * Represents a book.
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */</span>
+<span class="token keyword">function</span> <span class="token function">Book</span><span class="token punctuation">(</span><span class="token parameter">title<span class="token punctuation">,</span> author</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>下面我就举几个例子：</p> <p><strong><code>class</code> 的注释</strong>：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/** Class representing a point. */</span>
+<span class="token keyword">class</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * Create a point.
+     * @param {number} x - The x value.
+     * @param {number} y - The y value.
+     */</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Get the x value.
+     * @return {number} The x value.
+     */</span>
+    <span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Get the y value.
+     * @return {number} The y value.
+     */</span>
+    <span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Convert a string containing two comma-separated numbers into a point.
+     * @param {string} str - The string containing two comma-separated numbers.
+     * @return {Point} A Point object.
+     */</span>
+    <span class="token keyword">static</span> <span class="token function">fromString</span><span class="token punctuation">(</span><span class="token parameter">str</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong><code>class</code> 继承</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * Class representing a dot.
+ * @extends Point
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Dot</span> <span class="token keyword">extends</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * Create a dot.
+     * @param {number} x - The x value.
+     * @param {number} y - The y value.
+     * @param {number} width - The width of the dot, in pixels.
+     */</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> width</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/**
+     * Get the dot's width.
+     * @return {number} The dot's width, in pixels.
+     */</span>
+    <span class="token function">getWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong><code>module</code> 注释</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/** @module color/mixer */</span>
+
+<span class="token comment">/** The name of the module. */</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token string">'mixer'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/** The most recent blended color. */</span>
+<span class="token keyword">export</span> <span class="token keyword">var</span> lastColor <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * Blend two colors together.
+ * @param {string} color1 - The first color, in hexadecimal format.
+ * @param {string} color2 - The second color, in hexadecimal format.
+ * @return {string} The blended color.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">blend</span><span class="token punctuation">(</span><span class="token parameter">color1<span class="token punctuation">,</span> color2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment">// convert color to array of RGB values (0-255)</span>
+<span class="token keyword">function</span> <span class="token function">rgbify</span><span class="token punctuation">(</span><span class="token parameter">color</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * Get the red, green, and blue values of a color.
+     * @function
+     * @param {string} color - A color, in hexadecimal format.
+     * @returns {Array.&lt;number&gt;} An array of the red, green, and blue values,
+     * each ranging from 0 to 255.
+     */</span>
+    rgbify <span class="token keyword">as</span> toRgb
+<span class="token punctuation">}</span>
+</code></pre></div><p>通过上面几个例子是不是很快的知道各代码的作用是什么，需要的参数是什么，这样子一来代码就可以很容易的被同事或者说下一个接手维护的人看懂！对于方法描述，参数描述就可以看团队公司来定是写成英语还是中文了。</p> <p>下面是一些常用的注释标签</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * @author  作者，方便定位    
+ * @class（同义词：@constructor）标记类和构造函数    
+ * @constant @const常量标记    
+ * @description（同义词：@desc） 对内容进行描述    
+ * @module 模块名称    
+ * @enum 枚举类型标记    
+ * @global 全局对象标记    
+ * @param 函数参数标记    
+ * @returns（同义词：@return）函数返回标记    
+ * @this this指向标记    
+ * @see 参考链接    
+ * @memberof 标记模块间的从属关系    
+ * @event 在模板中标记可以被触发的事件，与@fire配合使用
+ * @alias 将成员视为具有不同的名称。
+ * @Async 表示函数是异步的。
+ * @augments（同义词：@extends）指示符号从父符号继承并添加到父符号。
+ * @borrows 此对象使用来自另一个对象的内容。
+ * @callback 回调函数。
+ * @copyright 版权信息。
+ * @default （同义词: @defaultvalue） 默认值。
+ * @example 示例。
+ */</span>
+</code></pre></div><p>还有很多，大家可以去 <a href="https://link.juejin.im/?target=https%3A%2F%2Fjsdoc.app%2F" target="_blank" rel="noopener noreferrer">jsDoc<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 看相应的一些规范。</p> <h3 id="行注释"><a href="#行注释" aria-hidden="true" class="header-anchor">#</a> 行注释</h3> <p>行注释的话，应该不用做太多的解释，直接用  <code>//</code> 注释相关信息就OK啦。当然 <code>// TODO</code> 习惯用这个得话也是非常不从的哟！</p> <h3 id="有趣的注释-无关主题，纯属娱乐，这条可以无视"><a href="#有趣的注释-无关主题，纯属娱乐，这条可以无视" aria-hidden="true" class="header-anchor">#</a> 有趣的注释(无关主题，纯属娱乐，这条可以无视)</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ *                    _ooOoo_
+ *                   o8888888o
+ *                   88&quot; . &quot;88
+ *                   (| -_- |)
+ *                    O\ = /O
+ *                ____/`---'\____
+ *              .   ' \\| |// `.
+ *               / \\||| : |||// \
+ *             / _||||| -:- |||||- \
+ *               | | \\\ - /// | |
+ *             | \_| ''\---/'' | |
+ *              \ .-\__ `-` ___/-. /
+ *           ___`. .' /--.--\ `. . __
+ *        .&quot;&quot; '&lt; `.___\_&lt;|&gt;_/___.' &gt;'&quot;&quot;.
+ *       | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ *         \ \ `-. \_ __\ /__ _/ .-` / /
+ * ======`-.____`-.___\_____/___.-`____.-'======
+ *                    `=---='
+ *
+ * .............................................
+ *          佛祖保佑             永无BUG
+ */</span>
+
+<span class="token comment">/**
+ *  佛曰:
+ *          写字楼里写字间，写字间里程序员；
+ *          程序人员写程序，又拿程序换酒钱。
+ *          酒醒只在网上坐，酒醉还来网下眠；
+ *          酒醉酒醒日复日，网上网下年复年。
+ *          但愿老死电脑间，不愿鞠躬老板前；
+ *          奔驰宝马贵者趣，公交自行程序员。
+ *          别人笑我忒疯癫，我笑自己命太贱；
+ *          不见满街漂亮妹，哪个归得程序员？
+ */</span>
+
+<span class="token comment">/**
+ * _ooOoo_
+ * o8888888o
+ * 88&quot; . &quot;88
+ * (| -_- |)
+ *  O\ = /O
+ * ___/`---'\____
+ * .   ' \\| |// `.
+ * / \\||| : |||// \
+ * / _||||| -:- |||||- \
+ * | | \\\ - /// | |
+ * | \_| ''\---/'' | |
+ * \ .-\__ `-` ___/-. /
+ * ___`. .' /--.--\ `. . __
+ * .&quot;&quot; '&lt; `.___\_&lt;|&gt;_/___.' &gt;'&quot;&quot;.
+ * | | : `- \`.;`\ _ /`;.`/ - ` : | |
+ * \ \ `-. \_ __\ /__ _/ .-` / /
+ * ======`-.____`-.___\_____/___.-`____.-'======
+ * `=---='
+ * .............................................
+ *           佛曰：bug泛滥，我已瘫痪！
+ */</span>
+
+<span class="token comment">/***
+ *      ┌─┐       ┌─┐ + +
+ *   ┌──┘ ┴───────┘ ┴──┐++
+ *   │                 │
+ *   │       ───       │++ + + +
+ *   ███████───███████ │+
+ *   │                 │+
+ *   │       ─┴─       │
+ *   │                 │
+ *   └───┐         ┌───┘
+ *       │         │
+ *       │         │   + +
+ *       │         │
+ *       │         └──────────────┐
+ *       │                        │
+ *       │                        ├─┐
+ *       │                        ┌─┘
+ *       │                        │
+ *       └─┐  ┐  ┌───────┬──┐  ┌──┘  + + + +
+ *         │ ─┤ ─┤       │ ─┤ ─┤
+ *         └──┴──┘       └──┴──┘  + + + +
+ *                神兽保佑
+ *               代码无BUG!
+ */</span>
+
+<span class="token comment">/***
+ *                  ___====-_  _-====___
+ *            _--^^^#####//      \\#####^^^--_
+ *         _-^##########// (    ) \\##########^-_
+ *        -############//  |\^^/|  \\############-
+ *      _/############//   (@::@)   \\############\_
+ *     /#############((     \\//     ))#############\
+ *    -###############\\    (oo)    //###############-
+ *   -#################\\  / VV \  //#################-
+ *  -###################\\/      \//###################-
+ * _#/|##########/\######(   /\   )######/\##########|\#_
+ * |/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|
+ * `  |/  V  V  `   V  \#\| |  | |/#/  V   '  V  V  \|  '
+ *    `   `  `      `   / | |  | | \   '      '  '   '
+ *                     (  | |  | |  )
+ *                    __\ | |  | | /__
+ *                   (vvv(VVV)(VVV)vvv)                
+ *                        神兽保佑
+ *                       代码无BUG!
+ */</span>
+
+<span class="token comment">/***
+ *
+ *
+ *                                                    __----~~~~~~~~~~~------___
+ *                                   .  .   ~~//====......          __--~ ~~
+ *                   -.            \_|//     |||\\  ~~~~~~::::... /~
+ *                ___-==_       _-~o~  \/    |||  \\            _/~~-
+ *        __---~~~.==~||\=_    -_--~/_-~|-   |\\   \\        _/~
+ *    _-~~     .=~    |  \\-_    '-~7  /-   /  ||    \      /
+ *  .~       .~       |   \\ -_    /  /-   /   ||      \   /
+ * /  ____  /         |     \\ ~-_/  /|- _/   .||       \ /
+ * |~~    ~~|--~~~~--_ \     ~==-/   | \~--===~~        .\
+ *          '         ~-|      /|    |-~\~~       __--~~
+ *                      |-~~-_/ |    |   ~\_   _-~            /\
+ *                           /  \     \__   \/~                \__
+ *                       _--~ _/ | .-~~____--~-/                  ~~==.
+ *                      ((-&gt;/~   '.|||' -_|    ~~-/ ,              . _||
+ *                                 -_     ~\      ~~---l__i__i__i--~~_/
+ *                                 _-~-__   ~)  \--______________--~~
+ *                               //.-~~~-~_--~- |-------~~~~~~~~
+ *                                      //.-~~~--\
+ *                               神兽保佑
+ *                              代码无BUG!
+ */</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/fe-notes/Frontend/CodeStyle/代码可读性.html" class="prev">
+          代码可读性
+        </a></span> <span class="next"><a href="/fe-notes/Frontend/HTML/HTML.html">
+          HTML简介
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/fe-notes/assets/js/app.b0a84784.js" defer></script><script src="/fe-notes/assets/js/17.839f1570.js" defer></script>
+  </body>
+</html>
