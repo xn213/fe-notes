@@ -13,25 +13,25 @@
 
 ## 基本工具
 
-1.  node.js以及npm包管理工具： [https://nodejs.org/en/](https://nodejs.org/en/)
-2.  git工具：[https://git-scm.com/downloads](https://git-scm.com/downloads)
+1. node.js以及npm包管理工具： [https://nodejs.org/en/](https://nodejs.org/en/)
+2. git工具：[https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 ## 构建基本项目结构
 
-1.  新建一个名为 `blog-demo` 的文件夹，命令行进入到该文件夹目录，输入命令：
+1. 新建一个名为 `blog-demo` 的文件夹，命令行进入到该文件夹目录，输入命令：
 
 ```bash
 # 按默认配置初始化一个项目，此时会在当前目录下生成 package.json 文件
 npm init -y
 ```
 
-1.  将 `VuePress` 作为一个本地依赖安装
+1. 将 `VuePress` 作为一个本地依赖安装
 
 ```bash
 npm install -D vuepress
 ```
 
-1.  在 `package.json` 里的 `scripts` 中添加如下代码，不需要修改其它代码
+1. 在 `package.json` 里的 `scripts` 中添加如下代码，不需要修改其它代码
 
 ```json
 {
@@ -42,19 +42,19 @@ npm install -D vuepress
 }
 ```
 
-1.  在项目根目录下，新建 `docs` 文件夹
+1. 在项目根目录下，新建 `docs` 文件夹
 
 ```bash
 mkdir docs
 ```
 
-1.  新建一个 `markdown` 文件
+1. 新建一个 `markdown` 文件
 
 ```bash
 echo '# Hello VuePress!' > docs/README.md
 ```
 
-1.  输入命令启动项目，在浏览器中访问 `http://localhost:8080/` 即可预览效果
+1. 输入命令启动项目，在浏览器中访问 `http://localhost:8080/` 即可预览效果
 
 ```bash
 npm run docs:dev
@@ -62,7 +62,7 @@ npm run docs:dev
 
 ## 基本配置
 
-现在我们已经构建出了最基本的项目结构，并且可以在浏览器中预览到 `docs` 目录下的 `README.md` 文件的效果，该文件即是我们网站的首页，如图所示：  
+现在我们已经构建出了最基本的项目结构，并且可以在浏览器中预览到 `docs` 目录下的 `README.md` 文件的效果，该文件即是我们网站的首页，如图所示：
 
 ![](https://upload-images.jianshu.io/upload_images/2917277-1d660f2741cbe837?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
@@ -146,7 +146,7 @@ module.exports = {
 My First Blog
 ```
 
-我们再在项目根目录，即 `blog-demo` 下，输入命令 `npm run docs:dev` ，浏览器中访问 `http://localhost:8080/blog-demo/` 查看页面效果，点击页面右上角的`FirstBlog` 可以看到我们第一篇博客：  
+我们再在项目根目录，即 `blog-demo` 下，输入命令 `npm run docs:dev` ，浏览器中访问 `http://localhost:8080/blog-demo/` 查看页面效果，点击页面右上角的`FirstBlog` 可以看到我们第一篇博客：
 
 ![](https://upload-images.jianshu.io/upload_images/2917277-e14e78cc9598a581?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
@@ -169,18 +169,17 @@ module.exports = {
 
 ## 本地预览
 
-至此我们已经完成了一个最简单的博客，再次运行项目，点击首页的按钮 `快速上手` ，我们可以看到：  
+至此我们已经完成了一个最简单的博客，再次运行项目，点击首页的按钮 `快速上手` ，我们可以看到：
 
 ![](https://upload-images.jianshu.io/upload_images/2917277-b069b0a0c75a4c37?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
 我的第一篇博客
 
-
 ---
 
-## **在 VuePress 中注册组件**  
+## **在 VuePress 中注册组件**
 
-在 VuePress 中编写 Vue 代码，和我们通常的编写[单文件](https://cn.vuejs.org/v2/guide/single-file-components.html#ad)的方式一致，有些时候我们有可能需要使用 Vue 的 UI 组件库。例如 [Element](http://element.eleme.io/)，[Mint ](http://mint-ui.github.io/docs/#/!/zh-cn)等，通常我们在项目中使用这些 UI 组件库的时候，我们都会在 main.js 或 botostrap.js 文件中统一注册。好在 VuePress 中也支持这种功能，我们可以通过创建一个 .vuepress/enhanceApp.js 文件来做一些应用级别的配置，这个文件 exprot default 一个钩子函数，在这个钩子中你可以做一些特殊处理，例如添加全局路由钩子，注册外部组件库。
+在 VuePress 中编写 Vue 代码，和我们通常的编写[单文件](https://cn.vuejs.org/v2/guide/single-file-components.html#ad)的方式一致，有些时候我们有可能需要使用 Vue 的 UI 组件库。例如 [Element](http://element.eleme.io/)，[Mint](http://mint-ui.github.io/docs/#/!/zh-cn)等，通常我们在项目中使用这些 UI 组件库的时候，我们都会在 main.js 或 botostrap.js 文件中统一注册。好在 VuePress 中也支持这种功能，我们可以通过创建一个 .vuepress/enhanceApp.js 文件来做一些应用级别的配置，这个文件 exprot default 一个钩子函数，在这个钩子中你可以做一些特殊处理，例如添加全局路由钩子，注册外部组件库。
 
 ```bash
 // .vuepress/enhanceApp.js
@@ -198,7 +197,7 @@ export default ({
 }
 ```
 
-在 Vue 正常开发中，有些时候我们可能会需要做一些自定义的组件，在 VuePress 中我们可以在` .vuepress/components `目录中编写我们的自定义组件，VuePress 在编译时遍历该目录中所有的 `*.vue `文件，并见它们注册为全局组件。
+在 Vue 正常开发中，有些时候我们可能会需要做一些自定义的组件，在 VuePress 中我们可以在` .vuepress/components `目录中编写我们的自定义组件，VuePress 在编译时遍历该目录中所有的 `*.vue`文件，并见它们注册为全局组件。
 
 ```bash
 // 注册一个自定义组件
@@ -249,23 +248,25 @@ npm install -D gh-pages
  "deploy:build": "npm run docs:build && gh-pages -d dist"
 }
 
-// 3. 打包并推送到 gh-pages 分支 
-// 注意: 使用配置了 远端仓库的 git 进行打包部署 
+// 3. 打包并推送到 gh-pages 分支
+// 注意: 使用配置了 远端仓库的 git 进行打包部署
 //       使用cmd可能报错: Failed to get remote.origin.url (task must either be run in a git repository with a configured origin remote or must be configured with the "repo" option).
 
 npm run deploy:build
 
 // 4.打开你的 Github pages, 地址是 https://<yourname>.github.io/<repo>
 ```
+
 [https://xn213.github.io/fe-notes](https://xn213.github.io/fe-notes)同与点击(余生的前端笔记本)
 
 ---
 
 ## 我的 config.js 配置, 及添加一键部署文件 deploy.sh
+
 ```js
 /**
- * 
- * !!注意!!: .sh 文件部署到 github 需要 git 已配置好 github 账号, 
+ *
+ * !!注意!!: .sh 文件部署到 github 需要 git 已配置好 github 账号,
  *           且 git 已打开当前目录在当前目录下!
  */
 module.exports = {
@@ -338,6 +339,7 @@ module.exports = {
   }
 }
 ```
+
 ``` bash
 当然也可以新建文件deploy.sh 进行一键打包部署
 //deploy.sh
@@ -402,26 +404,25 @@ git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 cd -
 ```
 
-5、双击 `deploy.sh` 运行脚本，会自动在我们的 `GitHub` 仓库中，创建一个名为 `gh-pages` 的分支，而我们要部署到 `GitHub Pages` 的正是这个分支。  
+5、双击 `deploy.sh` 运行脚本，会自动在我们的 `GitHub` 仓库中，创建一个名为 `gh-pages` 的分支，而我们要部署到 `GitHub Pages` 的正是这个分支。
 
 ![](https://upload-images.jianshu.io/upload_images/2917277-628f5af566791ba6?imageMogr2/auto-orient/strip%7CimageView2/2/w/316/format/webp)
 
-分支提交  
+分支提交
 
 6、这是最后一步了，在 `GitHub` 项目点击 `Setting` 按钮，找到 `GitHub Pages` - `Source`，选择 `gh-pages` 分支，点击 `Save` 按钮后，静静地等待它部署完成即可。
 
-* 部署效果预览：https://olewahhh.github.io/blog-demo/
-* GitHub仓库地址：https://github.com/olewaHHH/blog-demo  
+* 部署效果预览：<https://olewahhh.github.io/blog-demo/>
+* GitHub仓库地址：<https://github.com/olewaHHH/blog-demo>
 
 ![](https://upload-images.jianshu.io/upload_images/2917277-d9c58bf677fea5be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 
-Setting  
+Setting
 
 ![](https://upload-images.jianshu.io/upload_images/2917277-50bb68a41bd57756?imageMogr2/auto-orient/strip%7CimageView2/2/w/759/format/webp)
 
-
 ---
 
-**总结**  
+**总结**
 
 相比较 Hexo 而言 VuePress 上手更加容易，功能也更强大，例如在 VuePress 可以注册自定义组件，而且 VuePress 中编写 Vue 和平时一样学习成本几乎为零。所以如果您正在开源一款 Vue 相关的库或是其他项目，您都可以使用 VuePress 作为您的文档编辑工具。虽然并没有完全将 VuePress 内容讲完，学完该篇文章相信你可以对 VuePress 有个大概的了解，您至少可以快速搭建一个博客，如果您想对 VuePress 有更多了解，请参考[Vuepress 中文 API](https://vuepress.vuejs.org/zh/)。

@@ -28,16 +28,13 @@ vue create hello-world
 
 ![](https://user-gold-cdn.xitu.io/2019/5/14/16ab4006e39a6b69?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-
 安装完毕：
 
 ![2019-05-13-03](https://user-gold-cdn.xitu.io/2019/5/14/16ab4006e9c5875b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-
 我们先不急着执行，执行代码是最容易的事情，我们先打开代码看一下：
 
 ![](https://user-gold-cdn.xitu.io/2019/5/14/16ab4006eb09db9c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
 
 好吧，至少我们需要先安装[vetur插件](https://link.juejin.im/?target=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Doctref.vetur)。这几乎已经确定是开发`vue`项目的标配了，即使我不说，`vscode`也会强烈建议你安装它。
 
@@ -47,7 +44,6 @@ vue create hello-world
 
 ![](https://user-gold-cdn.xitu.io/2019/5/14/16ab4006ecab4ce3?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-
 不能格式化，连个提示都没有！
 
 ### 用lint格式化
@@ -55,7 +51,6 @@ vue create hello-world
 就算`vscode`里的`vetur`不能帮我们自动格式化，好在`package.json`命令里还有一个`lint`命令，我们看看`lint`命令能不能帮我们自动格式化：
 
 ![](https://user-gold-cdn.xitu.io/2019/5/14/16ab400741be9d0d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
 
 `lint`居然说没有错误！明明就是多了很多空格的错误好吧，为什么？
 
@@ -79,7 +74,6 @@ yarn add -D @vue/eslint-config-prettier
 
 ![](https://user-gold-cdn.xitu.io/2019/5/14/16ab4007983805d7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-
 所有的单引号被变成双引号了，原本行尾没有的分号被加上了分号。这是为什么呢？因为我们虽然引入了`prettier`，但是还没有对`prettier`做设置，我们在项目的根目录下创建一个`.prettierrc.js`文件，然后在其中加入：
 
 ``` bash
@@ -92,7 +86,6 @@ module.exports = {
 再次执行`yarn lint`，现在我们看到`lint`已经能够起作用了。它不但能把我们多余插入的空格删掉，并且能按照规则把双引号变成单引号，把行尾多余的分号删掉。当然，关于行尾加不加分号这是一个哲学命题，你可以根据你个人的喜好自行决定。在这里，我们权且按照vue-cli的标配执行。
 
 ![](https://user-gold-cdn.xitu.io/2019/5/14/16ab400792b77766?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
-
 
 到这一步很关键，假设你拿到一个烂的不再烂的`vue`项目，里面有几千个`.vue`文件，几万个各种格式错误，也都能通过`yarn lint`这一行命令把它们全部修正过来！
 
@@ -126,7 +119,6 @@ module.exports = {
 
 ![](https://user-gold-cdn.xitu.io/2019/5/14/16ab4007967a080b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-
 因为我们在`settings.json`文件里设置了`autoFixOnSave`，所以不管多么乱的格式，只要一按`Ctrl+S`保存，自动就帮我们把代码格式整理好了，是不是很方便呢？
 
 ### 和Prettier的冲突
@@ -147,7 +139,6 @@ module.exports = {
 以上就是用`vscode`开发`vue`程序的标配，并不像网上有些文章说的那么简单，不是只需要配一个`eslint`就能解决的事情，这里还用到了`vetur`，`eslint`和`prettier`，把几个工具综合用好，才能真正达到我们的错误随时可见，保存自动修改，更正既往错误的目的。希望每个前端工程师写出的代码都如出一人之手，漂亮简洁干净。
 
 我们的目标始终如一：`0错误0警告`。
-
 
 * 原文：[用vscode开发vue应用](https://link.juejin.im/?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000019055976)
 * 作者：[张京](https://link.juejin.im/?target=https%3A%2F%2Fsegmentfault.com%2Fu%2Ffengerzh)

@@ -4,16 +4,19 @@ emoji表情列表
 
 [![](https://img.shields.io/github/issues/caiyongji/emoji-list.svg)](https://github.com/caiyongji/emoji-list/issues)  [![](https://img.shields.io/github/forks/caiyongji/emoji-list.svg)](https://github.com/caiyongji/emoji-list/network) [![](https://img.shields.io/github/stars/caiyongji/emoji-list.svg)](https://github.com/caiyongji/emoji-list/stargazers) [![](https://travis-ci.org/caiyongji/emoji-list.svg?branch=master)](https://travis-ci.org/caiyongji/emoji-list) [![](https://img.shields.io/github/release/caiyongji/emoji-list.svg)](https://github.com/caiyongji/emoji-list/releases)[![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/english.svg)]()
 
-目录
+## 目录
+
 -----------------
 
-- [人物](#人物)
-- [自然](#自然)
-- [事物](#事物)
-- [地点](#地点)
-- [符号](#符号)
+- [Github emoji-list](#github-emoji-list)
+  - [目录](#目录)
+  - [人物](#人物)
+  - [自然](#自然)
+  - [事物](#事物)
+  - [地点](#地点)
+  - [符号](#符号)
 
-## 人物 ##
+## 人物
 
 | :bowtie: `:bowtie:` | :smile: `:smile:` | :laughing: `:laughing:` |
 |---|---|---|
@@ -80,9 +83,9 @@ emoji表情列表
 | :feelsgood: `:feelsgood:` | :finnadie: `:finnadie:` | :goberserk: `:goberserk:` |
 | :godmode: `:godmode:` | :hurtrealbad: `:hurtrealbad:` | :rage1: `:rage1:` |
 | :rage2: `:rage2:` | :rage3: `:rage3:` | :rage4: `:rage4:` |
-| :suspect: `:suspect:` | :trollface: `:trollface:` | 
+| :suspect: `:suspect:` | :trollface: `:trollface:` |
 
-## 自然 ##
+## 自然
 
 | :sunny: `:sunny:` | :umbrella: `:umbrella:` | :cloud: `:cloud:` |
 |---|---|---|
@@ -125,7 +128,7 @@ emoji表情列表
 | :milky_way: `:milky_way:` | :partly_sunny: `:partly_sunny:` | :octocat: `:octocat:` |
 | :squirrel: `:squirrel:` |
 
-## 事物 ##
+## 事物
 
 | :bamboo: `:bamboo:` | :gift_heart: `:gift_heart:` | :dolls: `:dolls:` |
 |---|---|---|
@@ -216,7 +219,7 @@ emoji表情列表
 | :sweet_potato: `:sweet_potato:` | :eggplant: `:eggplant:` | :tomato: `:tomato:` |
 | :corn: `:corn:` |
 
-## 地点 ##
+## 地点
 
 | :house: `:house:` | :house_with_garden: `:house_with_garden:` | :school: `:school:` |
 |---|---|---|
@@ -256,7 +259,7 @@ emoji表情列表
 | :ru: `:ru:` | :gb: `:gb:` | :uk: `:uk:` |
 | :de: `:de:` |
 
-## 符号 ##
+## 符号
 
 | :one: `:one:` | :two: `:two:` | :three: `:three:` |
 |---|---|---|

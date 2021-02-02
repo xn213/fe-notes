@@ -1,7 +1,7 @@
 {
   "name": "xn213_fe-notes",
   "version": "1.0.0",
-  "description": "基于vuepress",
+  "description": "基于 vuepress 搭建静态博客",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
