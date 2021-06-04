@@ -13,27 +13,20 @@
 10. git remote show origin 查看当前仓库基本信息。
 
 11. git log 查看所有的commit提交记录
-
 ```bash
 git log
 git log --pretty=oneline
 # oneline 将每个提交放在一行显示，这在提交数很大时非常有用。
 ```
-
 1. 查看最新的commit
-
 ```bash
 git show
 ```
-
 2. 查看指定commit hashID的所有修改：
-
 ```bash
 git show commitId
 ```
-
 3. 查看某次commit中具体某个文件的修改：
-
 ```bash
 git show commitId fileName
 ```

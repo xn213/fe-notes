@@ -2,7 +2,7 @@
 
 ##### [手把手教你使用 VuePress 搭建个人博客]()
 
-## 手把手教你使用 VuePress 搭建个人博客
+# 手把手教你使用 VuePress 搭建个人博客
 
 ## 一、为什么你需要一个博客？
 
@@ -82,7 +82,7 @@ module.exports = {
     nav:[ // 导航栏配置
       {text: '前端基础', link: '/accumulate/' },
       {text: '算法题库', link: '/algorithm/'},
-      {text: '微博', link: 'https://baidu.com'}
+      {text: '微博', link: 'https://baidu.com'}      
     ],
     sidebar: 'auto', // 侧边栏配置
     sidebarDepth: 2, // 侧边栏显示2级
@@ -147,7 +147,7 @@ this is a tip
 :tada: :100: :bamboo: :gift_heart: :fire:
 ```
 
-效果：
+效果：  
 ![tada](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/tada.png "tada") ![100](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/100.png "100") ![bamboo](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/bamboo.png "bamboo") ![gift_heart](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/gift_heart.png "gift_heart") ![fire](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/fire.png "fire")
 
 ![point_right](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/point_right.png "point_right") 这里有一份 [Emoji 大全](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
@@ -204,8 +204,8 @@ public 文件夹下新建 manifest.json 文件，添加
 
 一般来说，有两种方案可供选择：
 
-1. 自己买一个服务器，阿里云、腾讯云等，这种方式的好处是速度有保证、可以被搜索引擎收录，坏处是要花钱啊 ![moneybag](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/moneybag.png "moneybag") 土豪同学可以考虑。
-2. 使用 [Github Pages](https://pages.github.com/) 。什么是 Github Pages 呢？简单说就是 Github 提供的、用于搭建个人网站的静态站点托管服务。很多人用它搭建个人博客。这种方式的好处是免费、方便，坏处是速度可能会有些慢、不能被国内的搜索引擎收录。
+1.  自己买一个服务器，阿里云、腾讯云等，这种方式的好处是速度有保证、可以被搜索引擎收录，坏处是要花钱啊 ![moneybag](https://cdn.segmentfault.com/v-5c03a88e/global/img/emojis/moneybag.png "moneybag") 土豪同学可以考虑。
+2.  使用 [Github Pages](https://pages.github.com/) 。什么是 Github Pages 呢？简单说就是 Github 提供的、用于搭建个人网站的静态站点托管服务。很多人用它搭建个人博客。这种方式的好处是免费、方便，坏处是速度可能会有些慢、不能被国内的搜索引擎收录。
 
 最终我选择了方案2，下面将给大家讲解如何使用 Github Pages 服务。
 
@@ -217,7 +217,7 @@ public 文件夹下新建 manifest.json 文件，添加
 
 ### 新建仓库一： USERNAME.github.io （不用克隆到本地）
 
-> 注意！
+> 注意！  
 > `USERNAME` 必须是你 Github 的账号名称，不是你的名字拼音，也不是你的非主流网名，不要瞎起，要保证和Github账号名一模一样！
 
 例如我的 Github 账号名称是 `Remaininglife`
@@ -292,21 +292,21 @@ git push -f git@github.com:Remaininglife/Remaininglife.github.io.git master
 npm run deploy
 ```
 
-此时打开 Github Settings 中下面的链接: <https://Remaininglife.github.io/> 即可看到自己的主页啦~
+此时打开 Github Settings 中下面的链接: https://Remaininglife.github.io/ 即可看到自己的主页啦~
 
 ![clipboard.png](https://segmentfault.com/img/bVbkmwi?w=1384&h=344 "clipboard.png")
 
-#### PC 端页面是这样的
+#### PC 端页面是这样的：
 
 ![clipboard.png](https://segmentfault.com/img/bVbkmwm?w=3360&h=1914 "clipboard.png")
 
-#### 手机端页面是这样的
+#### 手机端页面是这样的：
 
 ![clipboard.png](https://segmentfault.com/img/bVbkmwo?w=752&h=1330 "clipboard.png")
 
 ## 六、发布到自己的个人域名
 
-如果你不满足于 [https://Remaininglife.github...](https://Remaininglife.github.io/) 这样的域名，想要一个自己个人的专属域名，比如 <http://www.zhangyunchen.cc/> ，毕竟一些大牛（阮一峰 <http://www.ruanyifeng.com/blog/>） 都是自己名字的网址哦，很方便很酷呢 😎
+如果你不满足于 [https://Remaininglife.github...](https://Remaininglife.github.io/) 这样的域名，想要一个自己个人的专属域名，比如 http://www.zhangyunchen.cc/ ，毕竟一些大牛（阮一峰 http://www.ruanyifeng.com/blog/） 都是自己名字的网址哦，很方便很酷呢 😎
 
 下面跟着步骤一步步来就好啦~
 

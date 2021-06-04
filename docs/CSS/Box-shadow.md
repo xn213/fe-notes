@@ -32,7 +32,7 @@
 
 ## 21-2.像素心
 
-![像素心](../../img/pxheart.png)
+![像素心](../img/pxheart.png)
 
 ```html
   <div class='pxheart'></div>

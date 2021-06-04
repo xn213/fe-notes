@@ -1,13 +1,11 @@
 module.exports = {
-  title: '余生的前端笔记本',  // 设置网站标题
-  description: '记录着很多很正常很平凡的代码', // 描述 首页标题下方
+  title: '余生的前端笔记本', // 设置网站标题
+  description: '记录平凡', // 描述 首页标题下方
   dest: './dist',  // 设置输出目录
-  base: '/fe-notes/',
-  head: [
-    ["link", { rel: "shortcut icon", href: "favicon.ico" }]
-  ],
+  // base: '/xn213/',
+  head: [['link', { rel: 'shortcut icon', href: 'favicon.ico' }]],
   markdown: {
-    lineNumbers: false
+    lineNumbers: true,
   },
   themeConfig: {
     // 假定 GitHub。也可以是一个完整的 Github 网址  // https://github.com/xn213/fe-notes
@@ -19,27 +17,47 @@ module.exports = {
     editLinks: false,
     sidebarDepth: 1, // 侧栏目录读取标题到 ##
     nav: [
-      { text: '大前端', link: '/Frontend/' },
-      { text: '笔记本', link: '/notes/' },
-      { text: 'Vue', link: '/Vue/VueBasic/VueRespond' },
-      { text: 'React', link: '/React/' },
-      { text: 'code工具', link: '/CodeTools/VSCode/VSCodeVue' },
-      { text: '大杂烩', link: '/dzh/Explain' },
-      { text: '余生博客', link: 'https://xn213.github.io/FrontEndNav/' },
-      // { text: 'test', link: '/Test/' },
-      // nav 下拉列表的配置
+      // { text: 'test', link: '/Test/' }, // 示例
+      // nav 带下拉列表的配置 示例
       // {
       //   text: '教程',
       //   items: [
-      //     { text: 'Vue', link: '/Vue/VueRespond' },
       //     { text: 'React', link: '/React/' },
-      //     { text: 'Vuepress', link: '/Vuepress/GithubPagesVuepressBlog' },
+      //     { text: 'Vue', link: '/Vue/VueRespond' },
       //   ]
       // },
+      { text: '计算机', link: '/Computer/' },
+      { text: '大前端', link: '/Frontend/' },
+      { text: 'Notes', link: '/Notes/' },
+      { text: 'Interview', link: '/Interview/' },
+      { text: 'JS', link: '/JS/' },
+      { text: 'CSS', link: '/CSS/' },
+      { text: 'Vue', link: '/Vue/VueBasic/VueRespond' },
+
+      { text: 'React', link: '/React/' },
+      { text: 'CodeTools', link: '/CodeTools/VSCode/VSCodeVue' },
+      { text: '大杂烩', link: '/DZH/Explain' },
     ],
     sidebar: {
+      '/Computer/': [
+        ['/Computer/Fetch', 'Fetch'],
+        {
+          title: 'Computer', // 侧边栏组
+          collapsable: true,
+          children: [
+            '/Computer/',
+            '/Computer/',
+            '/Computer/',
+          ],
+        },
+        {
+          title: 'Fetch',
+          collapsable: true,
+          children: ['/Computer/Fetch'],
+        },
+      ],
       '/Frontend/': [
-        [ '/Frontend/Fetch', 'Fetch'],
+        ['/Frontend/Fetch', 'Fetch'],
         {
           title: 'Code Style', // 侧边栏组
           collapsable: true,
@@ -47,76 +65,118 @@ module.exports = {
             '/Frontend/CodeStyle/页面优化',
             '/Frontend/CodeStyle/代码可读性',
             '/Frontend/CodeStyle/Annotation',
-          ]
+          ],
         },
         {
           title: 'HTML',
           collapsable: true,
-          children: [
-            '/Frontend/HTML/HTML',
-            '/Frontend/HTML/HTML5',
-          ]
+          children: ['/Frontend/HTML/HTML', '/Frontend/HTML/HTML5'],
         },
         {
-          title: 'Css',
+          title: 'CSS',
           collapsable: true,
           children: [
-            '/Frontend/Css/flex',
-            '/Frontend/Css/The-Shapes-of-CSS',
-            '/Frontend/Css/CssFonts_A-Z',
-            '/Frontend/Css/Box-shadow',
-            '/Frontend/Css/CssSecrets-note',
-            '/Frontend/Css/ColorPicker',
-          ]
+            '/Frontend/CSS/Flex',
+            '/Frontend/CSS/The-Shapes-of-CSS',
+            '/Frontend/CSS/CssFonts_A-Z',
+            '/Frontend/CSS/Box-shadow',
+            '/Frontend/CSS/CssSecrets-note',
+            '/Frontend/CSS/Less&Scss@mixin',
+            '/Frontend/CSS/ColorPicker',
+          ],
         },
         {
-          title: 'Js',
+          title: 'JS',
           collapsable: true,
           children: [
-            '/Frontend/Js/Es6',
-            '/Frontend/Js/this',
-            '/Frontend/Js/JS让人疑惑的表达式及原理',
-            '/Frontend/Js/EventLoop',
-            '/Frontend/Js/prototype',
-            '/Frontend/Js/WriteCode',
-            '/Frontend/Js/JavaScript 复杂判断的更优雅写法',
-          ]
+            '/Frontend/JS/ES6',
+            '/Frontend/JS/This',
+            '/Frontend/JS/JS让人疑惑的表达式及原理',
+            '/Frontend/JS/EventLoop',
+            '/Frontend/JS/Prototype',
+            '/Frontend/JS/WriteCode',
+            '/Frontend/JS/JavaScript 复杂判断的更优雅写法',
+          ],
         },
         {
           title: '项目',
           collapsable: true,
-          children: [
-            '/Frontend/Repo/特殊的IE8',
-          ]
+          children: ['/Frontend/Repo/特殊的IE8'],
         },
       ],
-      '/notes/': [
-        '/notes/',
-        '/notes/FrontendLearning',
-        '/notes/CommonCodeSnippets',
-        '/notes/BasicCodeSnippets',
-        '/notes/Initialization',
-        '/notes/jQuery',
-        '/notes/CommonNaming',
-        '/notes/UncommonCRT',
-        '/notes/FrontendHodgepodge',
+      '/Notes/': [
+        '/Notes/',
+        '/Notes/FrontendLearning',
+        '/Notes/CommonCodeSnippets',
+        '/Notes/BasicCodeSnippets',
+        '/Notes/Initialization',
+        '/Notes/jQuery',
+        '/Notes/CommonNaming',
+        '/Notes/UncommonCRT',
+        '/Notes/FrontendHodgepodge',
+      ],
+      '/Interview/': [
+        ['/Interview/',],
+        {
+          title: 'Interview', // 侧边栏组
+          collapsable: true,
+          children: [
+            '/Interview/',
+            '/Interview/',
+            '/Interview/',
+          ],
+        },
+        {
+          title: 'Fetch',
+          collapsable: true,
+          children: ['/Interview/'],
+        },
+      ],
+      '/JS/': [
+        ['/JS/ES6', 'ES6'],
+        {
+          title: 'JS', // 侧边栏组
+          collapsable: true,
+          children: [
+            '/JS/ES6',
+            '/JS/ES6',
+            '/JS/ES6',
+          ],
+        },
+        {
+          title: 'javascript',
+          collapsable: true,
+          children: ['/JS/ES6'],
+        },
+      ],
+      '/CSS/': [
+        ['/CSS/Flex', 'Flex'],
+        {
+          title: 'CSS', // 侧边栏组
+          collapsable: true,
+          children: [
+            '/CSS/Flex',
+            '/CSS/Flex',
+            '/CSS/Less&Scss@mixin',
+            '/CSS/Flex',
+          ],
+        },
+        {
+          title: 'CSS',
+          collapsable: true,
+          children: ['/CSS/Flex'],
+        },
       ],
       '/Vue/': [
         {
           title: 'Vue 基础',
           collapsable: true,
-          children: [
-            '/Vue/VueBasic/VueRespond',
-            '/Vue/VueBasic/VueJsBestPratice',
-          ]
+          children: ['/Vue/VueBasic/VueRespond', '/Vue/VueBasic/VueJsBestPratice'],
         },
         {
           title: 'VueJs 项目实践',
           collapsable: true,
-          children: [
-            '/Vue/VuePractice/vue.config.js',
-            '/Vue/VuePractice/Axios',
-          ]
+          children: ['/Vue/VuePractice/vue.config.js', '/Vue/VuePractice/Axios'],
         },
         {
           title: 'Vue Component',
@@ -125,14 +185,12 @@ module.exports = {
             '/Vue/Component/VueComponentByValue',
             '/Vue/Component/HowToCodeBestComponents',
             '/Vue/Component/TongYongCom-notification',
-          ]
+          ],
         },
         {
           title: 'Vue Router',
           collapsable: true,
-          children: [
-            '/Vue/VueRouter/vue-router',
-          ]
+          children: ['/Vue/VueRouter/vue-router'],
         },
         {
           title: 'Vuex',
@@ -141,14 +199,12 @@ module.exports = {
             '/Vue/vuex/vuex',
             '/Vue/vuex/辅助工具函数的实践与解析',
             '/Vue/vuex/vuexothers',
-          ]
+          ],
         },
         {
           title: 'Vue 移动端',
           collapsable: true,
-          children: [
-            '/Vue/VueMobile/Vue在移动端的优化解决方案',
-          ]
+          children: ['/Vue/VueMobile/Vue在移动端的优化解决方案'],
         },
         {
           title: 'Vue 遇到的问题',
@@ -157,7 +213,7 @@ module.exports = {
             '/Vue/VueProblems/Vue填坑之路',
             '/Vue/VueProblems/Vue遇到的问题查缺补漏',
             '/Vue/VueProblems/Vue-cli3',
-          ]
+          ],
         },
         {
           title: 'Vue 源码',
@@ -170,7 +226,7 @@ module.exports = {
             '/Vue/Vue/Vue源码中的高级js',
             '/Vue/Vue/vue-props',
             '/Vue/Vue/shared-util',
-          ]
+          ],
         },
       ],
       '/React/': [
@@ -181,48 +237,34 @@ module.exports = {
             '/React/ReactBasic/react-com-lifecycle',
             '/React/ReactBasic/ref和DOM操作',
             '/React/ReactBasic/JSX',
-          ]
+          ],
         },
         {
           title: 'React Router',
           collapsable: true,
-          children: [
-            '/React/ReactRouter/react-router',
-            '/React/ReactRouter/react-router-setting',
-          ]
+          children: ['/React/ReactRouter/react-router', '/React/ReactRouter/react-router-setting'],
         },
       ],
       '/CodeTools/': [
         {
           title: 'VSCode',
           collapsable: true,
-          children: [
-            '/CodeTools/VSCode/VSCodeVue',
-            '/CodeTools/VSCode/VSCode',
-          ]
+          children: ['/CodeTools/VSCode/VSCodeVue', '/CodeTools/VSCode/VSCode'],
         },
         {
           title: 'Git',
           collapsable: true,
-          children: [
-            '/CodeTools/Git/git-commit-template',
-            '/CodeTools/Git/git',
-          ]
+          children: ['/CodeTools/Git/git-commit-template', '/CodeTools/Git/git'],
         },
         {
           title: 'Chrome',
           collapsable: true,
-          children: [
-            '/CodeTools/Chrome/ChromeExtension',
-            '/CodeTools/Chrome/ChromeDebuggerTools',
-          ]
+          children: ['/CodeTools/Chrome/ChromeExtension', '/CodeTools/Chrome/ChromeDebuggerTools'],
         },
         {
           title: 'Github',
           collapsable: true,
-          children: [
-            '/CodeTools/Github/GithubEmojiList',
-          ]
+          children: ['/CodeTools/Github/GithubEmojiList'],
         },
         {
           title: 'VuePress',
@@ -231,41 +273,37 @@ module.exports = {
             '/CodeTools/Vuepress/VuePress',
             '/CodeTools/Vuepress/GithubPagesVuepressBlog',
             '/CodeTools/Vuepress/VuepressBlog',
-          ]
+          ],
         },
         {
           title: 'Markdown',
           collapsable: true,
-          children: [
-            '/CodeTools/Markdown/MarkdownGrammar',
-          ]
-        }
+          children: ['/CodeTools/Markdown/MarkdownGrammar'],
+        },
       ],
-      '/dzh/': [
-        '/dzh/Explain',
+      '/DZH/': [
+        '/DZH/Explain',
         {
           title: '搜刮到的前端技术文章',
           collapsable: true,
           children: [
-            '/dzh/Ajax',
-            '/dzh/AjaxTechDetails',
-            '/dzh/FrontendTools',
-            '/dzh/CookieSession',
-            '/dzh/Storage',
-            '/dzh/BigInterview',
-            '/dzh/GitDetail',
-            '/dzh/HeadTags',
-            '/dzh/MobileReg',
-          ]
+            '/DZH/Ajax',
+            '/DZH/AjaxTechDetails',
+            '/DZH/FrontendTools',
+            '/DZH/CookieSession',
+            '/DZH/Storage',
+            '/DZH/BigInterview',
+            '/DZH/GitDetail',
+            '/DZH/HeadTags',
+            '/DZH/MobileReg',
+          ],
         },
         {
           title: 'Growing 成长档案',
           collapsable: true,
-          children: [
-            '/dzh/Growing/growing',
-          ]
+          children: ['/DZH/Growing/growing'],
         },
       ],
     },
-  }
+  },
 }

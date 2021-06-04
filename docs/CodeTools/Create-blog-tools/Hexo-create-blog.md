@@ -21,14 +21,13 @@ hexo -v
 
 ## 2. hexo命令创建项目
 
-> 创建项目文件夹 cd 进入执行如下命令:
-
+> 创建项目文件夹 cd 进入执行如下命令: 
 ```bash
 # 初始化项目
 hexo init
 # 默认克隆一个landscape 主题: themes/landscape;
 # 默认创建一篇文章: source/_posts/hello-world.md
-# 进入项目根目录, hexo start
+# 进入项目根目录, hexo start 
 # ==> 简写为hexo s
 hexo s
 ```
@@ -41,7 +40,6 @@ hexo s
 hexo n '文章名: 如: my-first-blog'
 hexo n 'my-first-blog'
 ```
-
 ### 新建页面（重要）
 
 ```bash
@@ -56,9 +54,7 @@ hexo new page "tags"
 # 如下是 `yilia` 的主题
 git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 ```
-
 **重点修改配置**
-
 ```yml
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -66,7 +62,6 @@ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 # 主题名: ./themes/<主题名>
 theme: yilia # 默认 landscape
 ```
-
 ```bash
 # 清一下
 hexo clean
@@ -77,7 +72,6 @@ hexo clean
 ## 5. 部署到 `gihub-pages`
 
 > 用到 git 插件 hexo-deployer-git
-
 ```bash
 # 项目目录安装
 cnpm i --save hexo-deployer-git
@@ -91,7 +85,7 @@ cnpm i --save hexo-deployer-git
 deploy:
   # type 使用 git 部署
   type: git
-  # github 地址:
+  # github 地址: 
   repo: https://github.com/<username>/<proname>.git
   # github 项目分支, 默认 master, 还是写一下吧
   branch: master

@@ -9,7 +9,7 @@ pwd (Print Working Directory) 查看当前目录
 
 cd (Change Directory) 切换目录，如 cd /etc
 
-ls (List) 查看当前目录下内容，如 ls
+ls (List) 查看当前目录下内容，如 ls 
 
 mkdir (Make Directory) 创建目录，如 mkdir blog
 
@@ -31,43 +31,44 @@ head 查看文件前几行，如 head -5 index.html
 history 查看操作历史
 
 whoami 查看当前用户
-```
+```  
 
 ### 常用git命令
 
-注解                            | 命令
+注解                            | 命令                       
 ------------------------------- | -------------------------
-git reset HEAD XXX              | 从暂存区移出
-git diff                        | 查看编辑过的文件和 版本库的区别
-git config user.name xxx        | 配置当前仓库的用户名
-git config user.email xxx       | 配置当前仓库的邮箱
-git init                        | 初始化 git 仓库
-git add xxx                     | 添加到暂存区
-git commit -m "备注"             | 提交到本地仓库
+git reset HEAD XXX              | 从暂存区移出                   
+git diff                        | 查看编辑过的文件和 版本库的区别         
+git config user.name xxx        | 配置当前仓库的用户名               
+git config user.email xxx       | 配置当前仓库的邮箱                
+git init                        | 初始化 git 仓库               
+git add xxx                     | 添加到暂存区                   
+git commit -m "备注"             | 提交到本地仓库                  
 git commit -m "备注" -a          | git add  和 git commit 的综合
-git remote -v                    | 查看远程仓库地址
-git remote add 远程仓库名  远程仓库地址    | 添加远程仓库地址
-git remote rm 远程仓库名             | 删除远程仓库
-git remote set-url 远程仓库名 远程仓库地址 | 修改远程仓库地址
-git push 远程仓库地址 master          | 提交到远程仓库
-git push 远程仓库地址 master -u       | 提交到远程仓库 (以后 git push 即可)
-git clone 远程仓库地址                | 克隆仓库
-git pull                        | 拉取更新
-ssh-keygen -t rsa -C "邮箱地址"     | 生成 ssh证书
-cat ~/.ssh/id_rsa.pub           | 查看ssh证书
-git reset --hard "commit Id"    | 还原到某版本
-git reset --hared HEAD^         | 还原到上一个版本
-git log                         | 查看版本历史
-git reflog                      | 查看更强大的版本历史
-git checkout 文件名                | 还原文件到上一个版本
-git branch 分支名                  | 创建分支
-git checkout 分支名                | 切换到分支
-git merge 分支名                   | 合并分支
-git branch                        | 查看分支
-git branch -d 分支名               | 删除分支
+git remote -v                    | 查看远程仓库地址                 
+git remote add 远程仓库名  远程仓库地址    | 添加远程仓库地址                 
+git remote rm 远程仓库名             | 删除远程仓库                   
+git remote set-url 远程仓库名 远程仓库地址 | 修改远程仓库地址                 
+git push 远程仓库地址 master          | 提交到远程仓库                  
+git push 远程仓库地址 master -u       | 提交到远程仓库 (以后 git push 即可) 
+git clone 远程仓库地址                | 克隆仓库                     
+git pull                        | 拉取更新                     
+ssh-keygen -t rsa -C "邮箱地址"     | 生成 ssh证书                 
+cat ~/.ssh/id_rsa.pub           | 查看ssh证书                  
+git reset --hard "commit Id"    | 还原到某版本                   
+git reset --hared HEAD^         | 还原到上一个版本                 
+git log                         | 查看版本历史                   
+git reflog                      | 查看更强大的版本历史               
+git checkout 文件名                | 还原文件到上一个版本               
+git branch 分支名                  | 创建分支                     
+git checkout 分支名                | 切换到分支                    
+git merge 分支名                   | 合并分支                     
+git branch                        | 查看分支                     
+git branch -d 分支名               | 删除分支   
 git push origin --delete 分支名    | 删除远程分支
 git branch -r                      | 查看远端分支
 git branch -a                      | 查看所有分支
+
 
 ### vi编辑器
 
@@ -95,7 +96,7 @@ p) 命令模式 a进入编辑模式，当前光标后插入
 q) 命令模式 A进入编辑模式，光标移动到行尾
 r) 命令模式 o进入编辑模式，当前行下面插入新行
 s) 命令模式 O进入编辑模式，当前行上面插入新行
-```
+``` 
 
 ---
 
@@ -107,14 +108,14 @@ s) 命令模式 O进入编辑模式，当前行上面插入新行
 
 ```bash
 # 配置 用户名
-git config --global  user.name  xxx
+git config --global  user.name  xxx 
 
 # 配置 邮箱
-git config --global  user.email  xxx
+git config --global  user.email  xxx 
 
 # 查看用户名
 git config   user.name
-```
+``` 
 
 ### 2.创建版本库
 
@@ -173,15 +174,15 @@ git status
 输入    `git add ./`   请注意 当添加删除操作时  使用 `git add *` 是无效的。
 
 ```bash
-git add .    #该命名通用
-git add *
+git add .   	#该命名通用
+git add *		
 git add ./
 ```
 
 提交到本地仓库,**(将暂存区中的文件提交到 本地仓库 实现 版本 记录)**
 
 ```bash
-git commit -m "完成了xx功能"     #描述信息必须写
+git commit -m "完成了xx功能"    	#描述信息必须写
 ```
 
 当bash反馈为`working directory clean`则是我们最应该想看到的
@@ -205,7 +206,7 @@ touch .gitignore
 ```bash
 #忽略该文件
 私人文件.txt
-```
+``` 
 
 此时再次查看git状态,则看不到`私人文件.txt`状态了
 
@@ -375,14 +376,14 @@ git remote set-url origin git@github.com:xn213/gitTest.git
 git checkout  需要回退的文件名或者文件夹
 
 # 回退index.html到上一个版本
-git checkout index.html
+git checkout index.html	
 
 # 还原文件夹 styles 文件夹
 git checkout styles
 
-# 还原当前目录的所有文件
+# 还原当前目录的所有文件 
 git checkout ./
-```
+```  
 
 ### 查看版本历史
 
@@ -398,7 +399,7 @@ git log
 
 # 开始还原(版本号字段最少需要6个以上)
 git reset -–hard 3db7762c593251f1a78e518fdd3ed6d6cad626bc
-```
+``` 
 
 当版本回退后, 再次`git log`,会发现当前回退的版本之后的版本日志消失了
 
@@ -456,19 +457,19 @@ git checkout dev
 ```bash
 git add .
 git commit -m "dev下开发新功能1.1"
-```
+``` 
 
 ### 合并分支
 
 新功能开发完毕，需要将分支`dev`的代码合并到主分支`master`上
 
-1. 切换回主分支 `master`
+1.  切换回主分支 `master`
 
     ```bash
     git checkout master
     ```
 
-2. 合并分支 `dev`
+2.  合并分支 `dev`
 
     ```bash
     git merge dev
