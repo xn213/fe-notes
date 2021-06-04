@@ -2,7 +2,7 @@ module.exports = {
   title: '余生的前端笔记本', // 设置网站标题
   description: '记录平凡', // 描述 首页标题下方
   dest: './dist',  // 设置输出目录
-  // base: '/xn213/',
+  base: '/fe-notes/', // 静态资源需处理 github.io/fe-notes/
   head: [['link', { rel: 'shortcut icon', href: 'favicon.ico' }]],
   markdown: {
     lineNumbers: true,
