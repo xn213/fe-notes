@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Less &amp; Scss 中的 @mixin 用法 | 余生的前端笔记本</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="记录平凡">
+    <link rel="preload" href="/assets/css/0.styles.a4003502.css" as="style"><link rel="preload" href="/assets/js/app.63d82ad5.js" as="script"><link rel="preload" href="/assets/js/2.51fac5b8.js" as="script"><link rel="preload" href="/assets/js/16.a84e4240.js" as="script"><link rel="prefetch" href="/assets/js/10.1faf398f.js"><link rel="prefetch" href="/assets/js/100.edc9a410.js"><link rel="prefetch" href="/assets/js/101.95060d0c.js"><link rel="prefetch" href="/assets/js/102.287ab207.js"><link rel="prefetch" href="/assets/js/103.0ab73193.js"><link rel="prefetch" href="/assets/js/104.db88b5e5.js"><link rel="prefetch" href="/assets/js/105.a0677b44.js"><link rel="prefetch" href="/assets/js/106.fa8c7b46.js"><link rel="prefetch" href="/assets/js/107.c5a11447.js"><link rel="prefetch" href="/assets/js/108.0cafee1b.js"><link rel="prefetch" href="/assets/js/109.3b193034.js"><link rel="prefetch" href="/assets/js/11.6bf048df.js"><link rel="prefetch" href="/assets/js/110.8be6fdbd.js"><link rel="prefetch" href="/assets/js/111.ce26d313.js"><link rel="prefetch" href="/assets/js/112.a948c50d.js"><link rel="prefetch" href="/assets/js/113.e3cbf3c9.js"><link rel="prefetch" href="/assets/js/114.c8704f74.js"><link rel="prefetch" href="/assets/js/115.642b1af3.js"><link rel="prefetch" href="/assets/js/116.ce61115b.js"><link rel="prefetch" href="/assets/js/117.53e24d0d.js"><link rel="prefetch" href="/assets/js/118.02a083bb.js"><link rel="prefetch" href="/assets/js/12.05dc0712.js"><link rel="prefetch" href="/assets/js/13.8469840d.js"><link rel="prefetch" href="/assets/js/14.476bf2b4.js"><link rel="prefetch" href="/assets/js/15.73262e19.js"><link rel="prefetch" href="/assets/js/17.3be54d85.js"><link rel="prefetch" href="/assets/js/18.500d10d8.js"><link rel="prefetch" href="/assets/js/19.8474792d.js"><link rel="prefetch" href="/assets/js/20.c4c313bc.js"><link rel="prefetch" href="/assets/js/21.b0881497.js"><link rel="prefetch" href="/assets/js/22.d5268e49.js"><link rel="prefetch" href="/assets/js/23.58ca6578.js"><link rel="prefetch" href="/assets/js/24.a3e7d50c.js"><link rel="prefetch" href="/assets/js/25.16abe053.js"><link rel="prefetch" href="/assets/js/26.86c0a1e4.js"><link rel="prefetch" href="/assets/js/27.7030e691.js"><link rel="prefetch" href="/assets/js/28.b95b5e7e.js"><link rel="prefetch" href="/assets/js/29.38af5e72.js"><link rel="prefetch" href="/assets/js/3.b7850748.js"><link rel="prefetch" href="/assets/js/30.2506a5c4.js"><link rel="prefetch" href="/assets/js/31.26cfc1d9.js"><link rel="prefetch" href="/assets/js/32.0a4b2fe0.js"><link rel="prefetch" href="/assets/js/33.36d9b152.js"><link rel="prefetch" href="/assets/js/34.2b9dc880.js"><link rel="prefetch" href="/assets/js/35.2567933d.js"><link rel="prefetch" href="/assets/js/36.23821499.js"><link rel="prefetch" href="/assets/js/37.46a4d915.js"><link rel="prefetch" href="/assets/js/38.78a550d5.js"><link rel="prefetch" href="/assets/js/39.d483d13f.js"><link rel="prefetch" href="/assets/js/4.7e99a2d3.js"><link rel="prefetch" href="/assets/js/40.11b1098a.js"><link rel="prefetch" href="/assets/js/41.a470035a.js"><link rel="prefetch" href="/assets/js/42.fc89c186.js"><link rel="prefetch" href="/assets/js/43.15247d93.js"><link rel="prefetch" href="/assets/js/44.ab9e5f68.js"><link rel="prefetch" href="/assets/js/45.d347fb15.js"><link rel="prefetch" href="/assets/js/46.3dbf0169.js"><link rel="prefetch" href="/assets/js/47.bc6372ae.js"><link rel="prefetch" href="/assets/js/48.dbe77d2f.js"><link rel="prefetch" href="/assets/js/49.dd9d0b24.js"><link rel="prefetch" href="/assets/js/5.aaad667d.js"><link rel="prefetch" href="/assets/js/50.b0e508e0.js"><link rel="prefetch" href="/assets/js/51.8aa9e878.js"><link rel="prefetch" href="/assets/js/52.0018c870.js"><link rel="prefetch" href="/assets/js/53.5a06eb48.js"><link rel="prefetch" href="/assets/js/54.9e9520ca.js"><link rel="prefetch" href="/assets/js/55.b31105a8.js"><link rel="prefetch" href="/assets/js/56.74611572.js"><link rel="prefetch" href="/assets/js/57.6b67fd76.js"><link rel="prefetch" href="/assets/js/58.8b1468a6.js"><link rel="prefetch" href="/assets/js/59.e8be7d8c.js"><link rel="prefetch" href="/assets/js/6.a4f112fa.js"><link rel="prefetch" href="/assets/js/60.ea5b3a65.js"><link rel="prefetch" href="/assets/js/61.6c1aa400.js"><link rel="prefetch" href="/assets/js/62.6a9fd3f2.js"><link rel="prefetch" href="/assets/js/63.ee99461a.js"><link rel="prefetch" href="/assets/js/64.4661ccd2.js"><link rel="prefetch" href="/assets/js/65.e0e20e21.js"><link rel="prefetch" href="/assets/js/66.8b6a2cc6.js"><link rel="prefetch" href="/assets/js/67.f5bd593e.js"><link rel="prefetch" href="/assets/js/68.b2dd851d.js"><link rel="prefetch" href="/assets/js/69.17a8b7c2.js"><link rel="prefetch" href="/assets/js/7.f165d4ad.js"><link rel="prefetch" href="/assets/js/70.3b0a4bae.js"><link rel="prefetch" href="/assets/js/71.8fb52176.js"><link rel="prefetch" href="/assets/js/72.ae7d47ce.js"><link rel="prefetch" href="/assets/js/73.f6da11ac.js"><link rel="prefetch" href="/assets/js/74.75e35b29.js"><link rel="prefetch" href="/assets/js/75.9787b833.js"><link rel="prefetch" href="/assets/js/76.a6795439.js"><link rel="prefetch" href="/assets/js/77.f2de5c43.js"><link rel="prefetch" href="/assets/js/78.84fd7717.js"><link rel="prefetch" href="/assets/js/79.1d895e61.js"><link rel="prefetch" href="/assets/js/8.93badb4c.js"><link rel="prefetch" href="/assets/js/80.4f1b455f.js"><link rel="prefetch" href="/assets/js/81.78f79ea3.js"><link rel="prefetch" href="/assets/js/82.aecd9bd1.js"><link rel="prefetch" href="/assets/js/83.2dca8591.js"><link rel="prefetch" href="/assets/js/84.c0535a15.js"><link rel="prefetch" href="/assets/js/85.d38bf145.js"><link rel="prefetch" href="/assets/js/86.67f10e3c.js"><link rel="prefetch" href="/assets/js/87.c1ae19be.js"><link rel="prefetch" href="/assets/js/88.97d3b017.js"><link rel="prefetch" href="/assets/js/89.de85dd27.js"><link rel="prefetch" href="/assets/js/9.b253a2ce.js"><link rel="prefetch" href="/assets/js/90.034001bb.js"><link rel="prefetch" href="/assets/js/91.94575fb1.js"><link rel="prefetch" href="/assets/js/92.aedf6b5c.js"><link rel="prefetch" href="/assets/js/93.cb5c0106.js"><link rel="prefetch" href="/assets/js/94.330f76b4.js"><link rel="prefetch" href="/assets/js/95.1396fb1e.js"><link rel="prefetch" href="/assets/js/96.c6743534.js"><link rel="prefetch" href="/assets/js/97.dc846e20.js"><link rel="prefetch" href="/assets/js/98.8b7823df.js"><link rel="prefetch" href="/assets/js/99.ad33d094.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a4003502.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">余生的前端笔记本</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Computer/" class="nav-link">
+  计算机
+</a></div><div class="nav-item"><a href="/Frontend/" class="nav-link">
+  大前端
+</a></div><div class="nav-item"><a href="/Notes/" class="nav-link">
+  Notes
+</a></div><div class="nav-item"><a href="/Interview/" class="nav-link">
+  Interview
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link router-link-active">
+  CSS
+</a></div><div class="nav-item"><a href="/Vue/VueBasic/VueRespond.html" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/CodeTools/VSCode/VSCodeVue.html" class="nav-link">
+  CodeTools
+</a></div><div class="nav-item"><a href="/DZH/Explain.html" class="nav-link">
+  大杂烩
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Computer/" class="nav-link">
+  计算机
+</a></div><div class="nav-item"><a href="/Frontend/" class="nav-link">
+  大前端
+</a></div><div class="nav-item"><a href="/Notes/" class="nav-link">
+  Notes
+</a></div><div class="nav-item"><a href="/Interview/" class="nav-link">
+  Interview
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link router-link-active">
+  CSS
+</a></div><div class="nav-item"><a href="/Vue/VueBasic/VueRespond.html" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/CodeTools/VSCode/VSCodeVue.html" class="nav-link">
+  CodeTools
+</a></div><div class="nav-item"><a href="/DZH/Explain.html" class="nav-link">
+  大杂烩
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/CSS/Flex.html" class="sidebar-link">Flex</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CSS</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/CSS/Flex.html" class="sidebar-link">CSS3中Flex弹性布局的灵活运用</a></li><li><a href="/CSS/Flex.html" class="sidebar-link">CSS3中Flex弹性布局的灵活运用</a></li><li><a href="/CSS/Less&amp;Scss@mixin.html" class="active sidebar-link">Less &amp; Scss 中的 @mixin 用法</a></li><li><a href="/CSS/Flex.html" class="sidebar-link">CSS3中Flex弹性布局的灵活运用</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="less-scss-中的-mixin-用法"><a href="#less-scss-中的-mixin-用法" class="header-anchor">#</a> Less &amp; Scss 中的 @mixin 用法</h1> <div class="language-scss line-numbers-mode"><pre class="language-scss"><code><span class="token comment">// 使用</span>
+<span class="token comment">// 先引入</span>
+<span class="token keyword">@import</span> <span class="token string">'~@/assets/mixin.scss'</span><span class="token punctuation">;</span>
+
+<span class="token selector">.popup-txt </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token property">padding-top</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+  <span class="token comment">// 要使用的地方通过 @include 引入样式</span>
+  <span class="token keyword">@include</span> <span class="token function">border-bottom-1px</span><span class="token punctuation">(</span>#eeeeee<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><div class="language-scss line-numbers-mode"><pre class="language-scss"><code><span class="token comment">// 背景图片</span>
+<span class="token keyword">@mixin</span> <span class="token function">bgImage</span><span class="token punctuation">(</span><span class="token variable">$path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url</span><span class="token punctuation">(</span><span class="token variable">$path</span> <span class="token operator">+</span> <span class="token string">'@2x.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">-webkit-min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token property">min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url</span><span class="token punctuation">(</span><span class="token variable">$path</span> <span class="token operator">+</span> <span class="token string">'@3x.png'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 居中布局</span>
+<span class="token keyword">@mixin</span> <span class="token function">center</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">align-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 不换行</span>
+<span class="token keyword">@mixin</span> <span class="token function">no-wrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token function">top-line</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$c</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+  <span class="token property">border-top</span><span class="token punctuation">:</span> 1px solid <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> 0 0<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">-webkit-min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token property">min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.333333333<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token function">bottom-line</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$c</span></span><span class="token punctuation">:</span> #E6E6E6<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+  <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> 0 100%<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">-webkit-min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token property">min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleY</span><span class="token punctuation">(</span>0.333333333<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token function">left-line</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$c</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">border-left</span><span class="token punctuation">:</span> 1px solid <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> 0 0<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">-webkit-min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token property">min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.333333333<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token function">right-line</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$c</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">right</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">border-right</span><span class="token punctuation">:</span> 1px solid <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> 100% 0<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">-webkit-min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token property">min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scaleX</span><span class="token punctuation">(</span>0.333333333<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">@mixin</span> <span class="token function">line</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$c</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">,</span> <span class="token property"><span class="token variable">$border-radius</span></span><span class="token punctuation">:</span> 0<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">' '</span><span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200%<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$c</span><span class="token punctuation">;</span>
+  <span class="token property">transform-origin</span><span class="token punctuation">:</span> left top<span class="token punctuation">;</span>
+  <span class="token keyword">@if</span> <span class="token punctuation">(</span><span class="token variable">$border-radius</span> <span class="token operator">!=</span> 0<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token variable">$border-radius</span> <span class="token operator">*</span> 2<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">-webkit-min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token property">min-device-pixel-ratio</span><span class="token punctuation">:</span> 3<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token keyword">@if</span> <span class="token punctuation">(</span><span class="token variable">$border-radius</span> <span class="token operator">!=</span> 0<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token variable">$border-radius</span> <span class="token operator">*</span> 3<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 300%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 300%<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span>0.333333333<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 一像素上边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-top-1px</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:before </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">top-line</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 一像素下边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-bottom-1px</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:after </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">bottom-line</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 一像素上下边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-top-bottom-1px</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:before </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">top-line</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:after </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">bottom-line</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 一像素左边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-left-1px</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:before </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">left-line</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 一像素右边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-right-1px</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:before </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">right-line</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 一像素边框</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-1px</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #c7c7c7<span class="token punctuation">,</span> <span class="token property"><span class="token variable">$position</span></span><span class="token punctuation">:</span> relative<span class="token punctuation">,</span> <span class="token property"><span class="token variable">$border-radius</span></span><span class="token punctuation">:</span> 0<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> <span class="token variable">$position</span><span class="token punctuation">;</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:after </span><span class="token punctuation">{</span>
+    <span class="token keyword">@include</span> <span class="token function">line</span><span class="token punctuation">(</span><span class="token variable">$color</span><span class="token punctuation">,</span> <span class="token variable">$border-radius</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CSS/Flex.html" class="prev">
+        CSS3中Flex弹性布局的灵活运用
+      </a></span> <span class="next"><a href="/CSS/Flex.html">
+        CSS3中Flex弹性布局的灵活运用
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.63d82ad5.js" defer></script><script src="/assets/js/2.51fac5b8.js" defer></script><script src="/assets/js/16.a84e4240.js" defer></script>
+  </body>
+</html>

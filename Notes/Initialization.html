@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>初始化相关 | 余生的前端笔记本</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="记录平凡">
+    <link rel="preload" href="/assets/css/0.styles.a4003502.css" as="style"><link rel="preload" href="/assets/js/app.63d82ad5.js" as="script"><link rel="preload" href="/assets/js/2.51fac5b8.js" as="script"><link rel="preload" href="/assets/js/83.2dca8591.js" as="script"><link rel="prefetch" href="/assets/js/10.1faf398f.js"><link rel="prefetch" href="/assets/js/100.edc9a410.js"><link rel="prefetch" href="/assets/js/101.95060d0c.js"><link rel="prefetch" href="/assets/js/102.287ab207.js"><link rel="prefetch" href="/assets/js/103.0ab73193.js"><link rel="prefetch" href="/assets/js/104.db88b5e5.js"><link rel="prefetch" href="/assets/js/105.a0677b44.js"><link rel="prefetch" href="/assets/js/106.fa8c7b46.js"><link rel="prefetch" href="/assets/js/107.c5a11447.js"><link rel="prefetch" href="/assets/js/108.0cafee1b.js"><link rel="prefetch" href="/assets/js/109.3b193034.js"><link rel="prefetch" href="/assets/js/11.6bf048df.js"><link rel="prefetch" href="/assets/js/110.8be6fdbd.js"><link rel="prefetch" href="/assets/js/111.ce26d313.js"><link rel="prefetch" href="/assets/js/112.a948c50d.js"><link rel="prefetch" href="/assets/js/113.e3cbf3c9.js"><link rel="prefetch" href="/assets/js/114.c8704f74.js"><link rel="prefetch" href="/assets/js/115.642b1af3.js"><link rel="prefetch" href="/assets/js/116.ce61115b.js"><link rel="prefetch" href="/assets/js/117.53e24d0d.js"><link rel="prefetch" href="/assets/js/118.02a083bb.js"><link rel="prefetch" href="/assets/js/12.05dc0712.js"><link rel="prefetch" href="/assets/js/13.8469840d.js"><link rel="prefetch" href="/assets/js/14.476bf2b4.js"><link rel="prefetch" href="/assets/js/15.73262e19.js"><link rel="prefetch" href="/assets/js/16.a84e4240.js"><link rel="prefetch" href="/assets/js/17.3be54d85.js"><link rel="prefetch" href="/assets/js/18.500d10d8.js"><link rel="prefetch" href="/assets/js/19.8474792d.js"><link rel="prefetch" href="/assets/js/20.c4c313bc.js"><link rel="prefetch" href="/assets/js/21.b0881497.js"><link rel="prefetch" href="/assets/js/22.d5268e49.js"><link rel="prefetch" href="/assets/js/23.58ca6578.js"><link rel="prefetch" href="/assets/js/24.a3e7d50c.js"><link rel="prefetch" href="/assets/js/25.16abe053.js"><link rel="prefetch" href="/assets/js/26.86c0a1e4.js"><link rel="prefetch" href="/assets/js/27.7030e691.js"><link rel="prefetch" href="/assets/js/28.b95b5e7e.js"><link rel="prefetch" href="/assets/js/29.38af5e72.js"><link rel="prefetch" href="/assets/js/3.b7850748.js"><link rel="prefetch" href="/assets/js/30.2506a5c4.js"><link rel="prefetch" href="/assets/js/31.26cfc1d9.js"><link rel="prefetch" href="/assets/js/32.0a4b2fe0.js"><link rel="prefetch" href="/assets/js/33.36d9b152.js"><link rel="prefetch" href="/assets/js/34.2b9dc880.js"><link rel="prefetch" href="/assets/js/35.2567933d.js"><link rel="prefetch" href="/assets/js/36.23821499.js"><link rel="prefetch" href="/assets/js/37.46a4d915.js"><link rel="prefetch" href="/assets/js/38.78a550d5.js"><link rel="prefetch" href="/assets/js/39.d483d13f.js"><link rel="prefetch" href="/assets/js/4.7e99a2d3.js"><link rel="prefetch" href="/assets/js/40.11b1098a.js"><link rel="prefetch" href="/assets/js/41.a470035a.js"><link rel="prefetch" href="/assets/js/42.fc89c186.js"><link rel="prefetch" href="/assets/js/43.15247d93.js"><link rel="prefetch" href="/assets/js/44.ab9e5f68.js"><link rel="prefetch" href="/assets/js/45.d347fb15.js"><link rel="prefetch" href="/assets/js/46.3dbf0169.js"><link rel="prefetch" href="/assets/js/47.bc6372ae.js"><link rel="prefetch" href="/assets/js/48.dbe77d2f.js"><link rel="prefetch" href="/assets/js/49.dd9d0b24.js"><link rel="prefetch" href="/assets/js/5.aaad667d.js"><link rel="prefetch" href="/assets/js/50.b0e508e0.js"><link rel="prefetch" href="/assets/js/51.8aa9e878.js"><link rel="prefetch" href="/assets/js/52.0018c870.js"><link rel="prefetch" href="/assets/js/53.5a06eb48.js"><link rel="prefetch" href="/assets/js/54.9e9520ca.js"><link rel="prefetch" href="/assets/js/55.b31105a8.js"><link rel="prefetch" href="/assets/js/56.74611572.js"><link rel="prefetch" href="/assets/js/57.6b67fd76.js"><link rel="prefetch" href="/assets/js/58.8b1468a6.js"><link rel="prefetch" href="/assets/js/59.e8be7d8c.js"><link rel="prefetch" href="/assets/js/6.a4f112fa.js"><link rel="prefetch" href="/assets/js/60.ea5b3a65.js"><link rel="prefetch" href="/assets/js/61.6c1aa400.js"><link rel="prefetch" href="/assets/js/62.6a9fd3f2.js"><link rel="prefetch" href="/assets/js/63.ee99461a.js"><link rel="prefetch" href="/assets/js/64.4661ccd2.js"><link rel="prefetch" href="/assets/js/65.e0e20e21.js"><link rel="prefetch" href="/assets/js/66.8b6a2cc6.js"><link rel="prefetch" href="/assets/js/67.f5bd593e.js"><link rel="prefetch" href="/assets/js/68.b2dd851d.js"><link rel="prefetch" href="/assets/js/69.17a8b7c2.js"><link rel="prefetch" href="/assets/js/7.f165d4ad.js"><link rel="prefetch" href="/assets/js/70.3b0a4bae.js"><link rel="prefetch" href="/assets/js/71.8fb52176.js"><link rel="prefetch" href="/assets/js/72.ae7d47ce.js"><link rel="prefetch" href="/assets/js/73.f6da11ac.js"><link rel="prefetch" href="/assets/js/74.75e35b29.js"><link rel="prefetch" href="/assets/js/75.9787b833.js"><link rel="prefetch" href="/assets/js/76.a6795439.js"><link rel="prefetch" href="/assets/js/77.f2de5c43.js"><link rel="prefetch" href="/assets/js/78.84fd7717.js"><link rel="prefetch" href="/assets/js/79.1d895e61.js"><link rel="prefetch" href="/assets/js/8.93badb4c.js"><link rel="prefetch" href="/assets/js/80.4f1b455f.js"><link rel="prefetch" href="/assets/js/81.78f79ea3.js"><link rel="prefetch" href="/assets/js/82.aecd9bd1.js"><link rel="prefetch" href="/assets/js/84.c0535a15.js"><link rel="prefetch" href="/assets/js/85.d38bf145.js"><link rel="prefetch" href="/assets/js/86.67f10e3c.js"><link rel="prefetch" href="/assets/js/87.c1ae19be.js"><link rel="prefetch" href="/assets/js/88.97d3b017.js"><link rel="prefetch" href="/assets/js/89.de85dd27.js"><link rel="prefetch" href="/assets/js/9.b253a2ce.js"><link rel="prefetch" href="/assets/js/90.034001bb.js"><link rel="prefetch" href="/assets/js/91.94575fb1.js"><link rel="prefetch" href="/assets/js/92.aedf6b5c.js"><link rel="prefetch" href="/assets/js/93.cb5c0106.js"><link rel="prefetch" href="/assets/js/94.330f76b4.js"><link rel="prefetch" href="/assets/js/95.1396fb1e.js"><link rel="prefetch" href="/assets/js/96.c6743534.js"><link rel="prefetch" href="/assets/js/97.dc846e20.js"><link rel="prefetch" href="/assets/js/98.8b7823df.js"><link rel="prefetch" href="/assets/js/99.ad33d094.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a4003502.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">余生的前端笔记本</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Computer/" class="nav-link">
+  计算机
+</a></div><div class="nav-item"><a href="/Frontend/" class="nav-link">
+  大前端
+</a></div><div class="nav-item"><a href="/Notes/" class="nav-link router-link-active">
+  Notes
+</a></div><div class="nav-item"><a href="/Interview/" class="nav-link">
+  Interview
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/Vue/VueBasic/VueRespond.html" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/CodeTools/VSCode/VSCodeVue.html" class="nav-link">
+  CodeTools
+</a></div><div class="nav-item"><a href="/DZH/Explain.html" class="nav-link">
+  大杂烩
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Computer/" class="nav-link">
+  计算机
+</a></div><div class="nav-item"><a href="/Frontend/" class="nav-link">
+  大前端
+</a></div><div class="nav-item"><a href="/Notes/" class="nav-link router-link-active">
+  Notes
+</a></div><div class="nav-item"><a href="/Interview/" class="nav-link">
+  Interview
+</a></div><div class="nav-item"><a href="/JS/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/CSS/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/Vue/VueBasic/VueRespond.html" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/CodeTools/VSCode/VSCodeVue.html" class="nav-link">
+  CodeTools
+</a></div><div class="nav-item"><a href="/DZH/Explain.html" class="nav-link">
+  大杂烩
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Notes/" class="sidebar-link">只有我才能看的下去的代码</a></li><li><a href="/Notes/FrontendLearning.html" class="sidebar-link">前端学习</a></li><li><a href="/Notes/CommonCodeSnippets.html" class="sidebar-link">常用代码片段 CommonCodeSnippets</a></li><li><a href="/Notes/BasicCodeSnippets.html" class="sidebar-link">基础代码片段</a></li><li><a href="/Notes/Initialization.html" class="active sidebar-link">初始化相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Notes/Initialization.html#项目目录通用结构" class="sidebar-link">项目目录通用结构</a></li><li class="sidebar-sub-header"><a href="/Notes/Initialization.html#html页面初始化" class="sidebar-link">HTML页面初始化</a></li><li class="sidebar-sub-header"><a href="/Notes/Initialization.html#css重置样式" class="sidebar-link">CSS重置样式</a></li><li class="sidebar-sub-header"><a href="/Notes/Initialization.html#js兼容文件" class="sidebar-link">JS兼容文件</a></li><li class="sidebar-sub-header"><a href="/Notes/Initialization.html#webpack" class="sidebar-link">webpack</a></li></ul></li><li><a href="/Notes/jQuery.html" class="sidebar-link">JQuery</a></li><li><a href="/Notes/CommonNaming.html" class="sidebar-link">常见命名</a></li><li><a href="/Notes/UncommonCRT.html" class="sidebar-link">不常用的对照表</a></li><li><a href="/Notes/FrontendHodgepodge.html" class="sidebar-link">前端大杂烩</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="初始化相关"><a href="#初始化相关" class="header-anchor">#</a> 初始化相关</h1> <h2 id="项目目录通用结构"><a href="#项目目录通用结构" class="header-anchor">#</a> 项目目录通用结构</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>- 项目
+  |- js
+  |- lib
+  |- pages
+  |- static
+  |- styles
+  | index.html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><hr> <h2 id="html页面初始化"><a href="#html页面初始化" class="header-anchor">#</a> HTML页面初始化</h2> <p><em><strong>PC端</strong></em></p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- 标准的理想视口 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- 控制IE渲染内核的选择。ie=edge确保ie为最新版本,chrome=1针对装了chrome frame插件的IE浏览器起作用，以防万一写上。 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ie=edge, chrome=1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>网站标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Author<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>网页作者<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Copyright<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>网站版权<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>keywords<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>网站关键字<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>description<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>网站描述<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Shortcut Icon<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>网站.ico图标路径<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylesheet<span class="token punctuation">&quot;</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>css样式文件路径<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>javascript脚本文件路径<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><hr> <h2 id="css重置样式"><a href="#css重置样式" class="header-anchor">#</a> CSS重置样式</h2> <p><em><strong>定制自己的  reset.css</strong></em></p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token atrule"><span class="token rule">@charset</span> <span class="token string">&quot;utf-8&quot;</span><span class="token punctuation">;</span></span> 
+
+<span class="token selector">html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input</span><span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token comment">/* 怪异盒子模型,看需求加 */</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */</span>
+<span class="token selector">html</span> <span class="token punctuation">{</span> <span class="token property">overflow-y</span><span class="token punctuation">:</span> scroll<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token selector">body</span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">&quot;Arial&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;Microsoft YaHei&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;黑体&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;宋体&quot;</span><span class="token punctuation">,</span>sans-serif<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">blockquote, q</span> <span class="token punctuation">{</span>
+  <span class="token property">quotes</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 表格重置看需求加 */</span>
+<span class="token selector">table</span> <span class="token punctuation">{</span>
+  <span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token punctuation">;</span>
+  <span class="token property">border-spacing</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">a</span><span class="token punctuation">{</span>
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token comment">/* 转化为块级容器,看需求加 */</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token comment">/* 继承父级颜色 */</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span> 
+   <span class="token comment">/* 去除a标签在移动端的默认蓝色区域 */</span>
+  <span class="token property">-webkit-tap-highlight-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">a:hover</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span> 
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> underline<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token selector">img</span><span class="token punctuation">{</span>
+   <span class="token comment">/* 去掉图片默认的3px */</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token comment">/* 转化为块级容器,看需求加 */</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+  <span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">input</span><span class="token punctuation">{</span>
+  <span class="token comment">/* 去除默认外轮廓线跟边框线 */</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">ul,li,ol</span><span class="token punctuation">{</span>
+  <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*清除浮动*/</span>
+<span class="token selector">.clearfix::after</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">;</span>
+  <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.clearfix</span> <span class="token punctuation">{</span>
+  *<span class="token property">zoom</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br></div></div><p><em><strong>另外也可以通过引入 Normalize.css进行css初始化</strong></em></p> <hr> <h2 id="js兼容文件"><a href="#js兼容文件" class="header-anchor">#</a> JS兼容文件</h2> <p><em><strong>IE8及以下不兼容H5语义化标签,加载 html5shiv.js</strong></em></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!--[if lt IE 9]&gt;
+	&lt;script src=&quot;html5shiv.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em><strong>IE8及以下不兼容CSS3 Media,加载 response.js</strong></em></p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!--[if lt IE 9]&gt;
+	&lt;script src=&quot;respond.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>注:response.js无法解析CSS @import命令。</p></blockquote> <p><em><strong>让IE6~8支持CSS3伪类和属性选择器,加载 selectivizr.js</strong></em></p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!--[if (gte IE 6)&amp;(lte IE 8)]&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;selectivizr.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><em><strong>处理移动端点击延迟300ms左右的事件(点透事件),加载 fastclick.js</strong></em></p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 在head内引入fastclick.js  --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>./fastclick.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>初始化</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'addEventListener'</span> <span class="token keyword">in</span> document<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'DOMContentLoaded'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		FastClick<span class="token punctuation">.</span><span class="token function">attach</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><hr> <h2 id="webpack"><a href="#webpack" class="header-anchor">#</a> webpack</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Notes/BasicCodeSnippets.html" class="prev">
+        基础代码片段
+      </a></span> <span class="next"><a href="/Notes/jQuery.html">
+        JQuery
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.63d82ad5.js" defer></script><script src="/assets/js/2.51fac5b8.js" defer></script><script src="/assets/js/83.2dca8591.js" defer></script>
+  </body>
+</html>
